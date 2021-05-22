@@ -18,6 +18,10 @@
 .env.test.local
 .env.production.local
 
+# starter files including README and design files
+/rest-countries-starter
+*.fig
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
