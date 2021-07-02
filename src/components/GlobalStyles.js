@@ -61,6 +61,16 @@ const GlobalStyles = createGlobalStyle`
     }
 
     /* GLOBAL STYLES */
+    html {
+        /* Colors */
+        
+
+        --font-family: 'Nunito Sans', sans-serif;
+    }
+
+    body {
+        font-family: var(--font-family);
+    }
     
 `;
 
