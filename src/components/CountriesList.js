@@ -7,7 +7,7 @@ function CountriesList() {
 
 	useEffect(() => {
 		try {
-			const fieldList = 'flag;name;population;region;capital;alpha3Code';
+			const fieldList = 'flag;name;population;region;capital;alpha3Code;numericCode';
 			axios
 				.get(`https://restcountries.eu/rest/v2/all?fields=${fieldList}`)
 				.then(response => {
@@ -19,9 +19,18 @@ function CountriesList() {
 		}
 	}, []);
 
+	// useEffect(() => {
+	// 	try {
+	// 		axios.get(`https://restcountries.eu/rest/v2/all`).then(response => {
+	// 			console.log(response.data);
+	// 		});
+	// 	} catch (error) {
+	// 		console.error(error);
+	// 	}
+	// }, []);
+
 	return (
 		<div>
-			<p>CountriesList</p>
 			{countries.map(country => (
 				<CountryCard country={country} key={country.alpha3Code} />
 			))}
